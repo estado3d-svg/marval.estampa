@@ -10,8 +10,7 @@ Página web de **Marval Estampa**: merchandising y estampado personalizado — r
 ## Estado actual (última sesión)
 
 - Sitio estático HTML/CSS/JS puro (sin build, sin dependencias).
-- Secciones: Hero, Revendedores, Cómo personalizar, Contacto.
-- **La sección Tienda fue eliminada** por pedido del cliente (queda pendiente volverla a armar cuando se definan productos reales).
+- Secciones: Hero, Tienda (9 productos con filtros), Revendedores, Cómo personalizar, Contacto.
 - WhatsApp: **+54 9 11 2724-5396** (configurado en `js/main.js` y en todos los links de `index.html`).
 - Modo claro/oscuro con toggle (guarda en `localStorage`).
 - Efectos: barra de progreso de scroll, spotlight que sigue al cursor, brillo radial en tarjetas, shine en botones.

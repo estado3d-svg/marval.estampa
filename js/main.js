@@ -45,6 +45,15 @@ if (fine.matches) {
       });
     }
   });
+
+  // Brillo suave que sigue al cursor dentro de cada tarjeta
+  document.querySelectorAll(".card").forEach((card) => {
+    card.addEventListener("pointermove", (e) => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty("--gx", `${((e.clientX - r.left) / r.width) * 100}%`);
+      card.style.setProperty("--gy", `${((e.clientY - r.top) / r.height) * 100}%`);
+    });
+  });
 }
 
 // Nav: sombra al hacer scroll
@@ -70,8 +79,32 @@ menu.querySelectorAll("a").forEach((link) =>
   })
 );
 
+// Filtros de tienda
+const chips = document.querySelectorAll(".chip[data-filter]");
+const cards = document.querySelectorAll(".card[data-cat]");
+
+chips.forEach((chip) => {
+  chip.addEventListener("click", () => {
+    chips.forEach((c) => c.classList.remove("chip--active"));
+    chip.classList.add("chip--active");
+
+    const filter = chip.dataset.filter;
+    let delay = 0;
+    cards.forEach((card) => {
+      const show = filter === "todos" || card.dataset.cat === filter;
+      card.style.display = show ? "" : "none";
+      if (show) {
+        card.style.animation = "none";
+        void card.offsetWidth;
+        card.style.animation = `cardIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) ${delay}s both`;
+        delay += 0.06;
+      }
+    });
+  });
+});
+
 // Animación de aparición al hacer scroll
-const revealEls = document.querySelectorAll(".section__head, .feature, .step, .resellers__cta, .contact__inner");
+const revealEls = document.querySelectorAll(".section__head, .card, .feature, .step, .resellers__cta, .contact__inner");
 
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
