@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marval Estampa | Merchandising y Estampados Personalizados</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="Remeras personalizadas, textiles y calcos para consumidores finales y revendedores. Diseñá, personalizá y vivilo con Marval Estampa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#inicio">Saltar al contenido</a>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#inicio" class="logo" aria-label="Marval Estampa - Inicio">
+        <span class="logo__mark">M</span>
+        <span class="logo__text">Marval<span>Estampa</span></span>
+      </a>
+      <nav class="nav__menu" id="menu" aria-label="Navegación principal">
+        <a href="#inicio" class="nav__link">Inicio</a>
+        <a href="#tienda" class="nav__link">Tienda</a>
+        <a href="#revendedores" class="nav__link">Revendedores</a>
+        <a href="#personalizar" class="nav__link">Cómo personalizar</a>
+        <a href="#contacto" class="nav__link">Contacto</a>
+        <a href="https://wa.me/5491127245396?text=Hola%20Marval%20Estampa%2C%20quiero%20hacer%20un%20pedido" class="btn btn--dark nav__cta" target="_blank" rel="noopener">Pedir ahora</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="pill pill--violet">Nuevo catálogo 2026 ✦</span>
+          <h1 class="hero__title">Tu idea, <br>estampada <span class="grad-text">a tu manera.</span></h1>
+          <p class="hero__subtitle">Remeras personalizadas, textiles y calcos con calidad de impresión profesional. Para vos y para tu marca.</p>
+          <div class="hero__actions">
+            <a href="#tienda" class="btn btn--violet btn--lg">Ver catálogo</a>
+            <a href="#personalizar" class="btn btn--ghost btn--lg">Cómo funciona</a>
+          </div>
+          <ul class="hero__stats">
+            <li><strong>+2k</strong><span>pedidos entregados</span></li>
+            <li><strong>48hs</strong><span>envío a todo el país</span></li>
+            <li><strong>100%</strong><span>estampado premium</span></li>
+          </ul>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="blob blob--1"></div>
+          <div class="blob blob--2"></div>
+          <div class="tee">
+            <div class="tee__body"></div>
+            <div class="tee__sleeve tee__sleeve--l"></div>
+            <div class="tee__sleeve tee__sleeve--r"></div>
+            <div class="tee__print">M</div>
+          </div>
+          <div class="float-card float-card--1">✦ Estampado UV</div>
+          <div class="float-card float-card--2">🎨 Diseños propios</div>
+        </div>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Remeras ✦ Textil ✦ Calcos ✦ Personalizado ✦ Revendedores ✦</span>
+          <span>Remeras ✦ Textil ✦ Calcos ✦ Personalizado ✦ Revendedores ✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIENDA -->
+    <section class="shop section" id="tienda">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="pill pill--lime">Tienda</span>
+            <h2 class="section__title">Elegí tu <span class="grad-text">estilo</span></h2>
+            <p class="section__sub">Remeras, textiles y calcos. Personalizá cada pieza con tu diseño.</p>
+          </div>
+          <div class="shop__filters" role="group" aria-label="Filtrar catálogo">
+            <button class="chip chip--active" data-filter="todos">Todos</button>
+            <button class="chip" data-filter="remeras">Remeras</button>
+            <button class="chip" data-filter="textil">Textil</button>
+            <button class="chip" data-filter="calcos">Calcos</button>
+          </div>
+        </div>
+
+        <div class="grid" id="catalog">
+          <article class="card" data-cat="remeras">
+            <div class="card__media card__media--1">
+              <span class="card__badge">Más vendida</span>
+              <div class="card__icon">👕</div>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Remera Oversize Premium</h3>
+              <p class="card__desc">Algodón peinado 220gr. Estampado de alta duración.</p>
+              <div class="card__foot">
+                <span class="card__price">$14.900</span>
+                <a href="https://wa.me/5491127245396?text=Hola%20Marval%20Estampa%2C%20me%20interesa%20la%20Remera%20Oversize%20Premium" class="btn btn--dark btn--sm" target="_blank" rel="noopener">Consultar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-cat="remeras">
+            <div class="card__media card__media--2">
+              <div class="card__icon">🎽</div>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Remera Deportiva</h3>
+              <p class="card__desc">Tecnológica, fresca y liviana. Ideal para clubes y eventos.</p>
+              <div class="card__foot">
+                <span class="card__price">$12.500</span>
+                <a href="https://wa.me/5491127245396?text=Hola%20Marval%20Estampa%2C%20me%20interesa%20la%20Remera%20Deportiva" class="btn btn--dark btn--sm" target="_blank" rel="noopener">Consultar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-cat="remeras">
+            <div class="card__media card__media--3">
+              <div class="card__icon">🛹</div>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Remera Urban Street</h3>
+              <p class="card__desc">Corte moderno y estampado UV que no se agrieta.</p>
+              <div class="card__foot">
+                <span class="card__price">$15.900</span>
+                <a href="https://wa.me/5491127245396?text=Hola%20Marval%20Estampa%2C%20me%20interesa%20la%20Remera%20Urban%20Street" class="btn btn--dark btn--sm" target="_blank" rel="noopener">Consultar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-cat="textil">
+            <div class="card__media card__media--4">
+              <span class="card__badge card__badge--dark">Nuevo</span>
+              <div class="card__icon">🧢</div>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Gorras Bordadas</h3>
+              <p class="card__desc">Bordado a máquina con tu logo o diseño.</p>
+              <div class="card__foot">
+                <span class="card__price">$11.900</span>
+                <a href="https://wa.me/5491127245396?text=Hola%20Marval%20Estampa%2C%20me%20interesan%20las%20Gorras%20Bordadas" class="btn btn--dark btn--sm" target="_blank" rel="noopener">Consultar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-cat="textil">
+            <div class="card__media card__media--5">
+              <div class="card__icon">🧥</div>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Hoodies & Buzos</h3>
+              <p class="card__desc">Frisa premium para la temporada fría.</p>
+              <div class="card__foot">
+                <span class="card__price">$28.900</span>
+                <a href="https://wa.me/5491127245396?text=Hola%20Marval%20Estampa%2C%20me%20interesan%20los%20Hoodies" class="btn btn--dark btn--sm" target="_blank" rel="noopener">Consultar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-cat="textil">
+            <div class="card__media card__media--6">
+              <div class="card__icon">👜</div>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Totes & Ecológicas</h3>
+              <p class="card__desc">Lienzo resistente, ideal para tu marca.</p>
+              <div class="card__foot">
+                <span class="card__price">$8.900</span>
+                <a href="https://wa.me/5491127245396?text=Hola%20Marval%20Estampa%2C%20me%20interesan%20las%20Totes" class="btn btn--dark btn--sm" target="_blank" rel="noopener">Consultar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-cat="calcos">
+            <div class="card__media card__media--7">
+              <span class="card__badge">Pack 50</span>
+              <div class="card__icon">🏷️</div>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Calcos Holográficos</h3>
+              <p class="card__desc">Efecto iridiscente para darle brillo a tu marca.</p>
+              <div class="card__foot">
+                <span class="card__price">$6.900</span>
+                <a href="https://wa.me/5491127245396?text=Hola%20Marval%20Estampa%2C%20me%20interesan%20los%20Calcos%20Holograficos" class="btn btn--dark btn--sm" target="_blank" rel="noopener">Consultar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-cat="calcos">
+            <div class="card__media card__media--8">
+              <div class="card__icon">🚗</div>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Calcos para Autos</h3>
+              <p class="card__desc">Vinilo de corte resistente a la intemperie.</p>
+              <div class="card__foot">
+                <span class="card__price">$4.900</span>
+                <a href="https://wa.me/5491127245396?text=Hola%20Marval%20Estampa%2C%20me%20interesan%20los%20Calcos%20para%20Autos" class="btn btn--dark btn--sm" target="_blank" rel="noopener">Consultar</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-cat="calcos">
+            <div class="card__media card__media--9">
+              <div class="card__icon">💻</div>
+            </div>
+            <div class="card__body">
+              <h3 class="card__title">Stickers Personalizados</h3>
+              <p class="card__desc">Para laptop, celulares y emprendimientos.</p>
+              <div class="card__foot">
+                <span class="card__price">$3.900</span>
+                <a href="https://wa.me/5491127245396?text=Hola%20Marval%20Estampa%2C%20me%20interesan%20los%20Stickers" class="btn btn--dark btn--sm" target="_blank" rel="noopener">Consultar</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVENDEDORES -->
+    <section class="resellers section section--tint" id="revendedores">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="pill pill--violet">Revendedores</span>
+          <h2 class="section__title">Vendé sin <span class="grad-text">stock ni riesgo</span></h2>
+          <p class="section__sub">Sumate como revendedor y sacá el máximo beneficio por unidad con precios mayoristas reales.</p>
+        </div>
+        <div class="grid grid--3">
+          <div class="feature">
+            <div class="feature__icon">📈</div>
+            <h3 class="feature__title">Precio mayorista</h3>
+            <p class="feature__text">Desde 5 unidades accedés a precios especiales con margen para revender.</p>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">🕒</div>
+            <h3 class="feature__title">Sin stock propio</h3>
+            <p class="feature__text">Nosotros producimos. Vos tomás los pedidos y coordinamos la entrega.</p>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">🛠️</div>
+            <h3 class="feature__title">Kit de venta</h3>
+            <p class="feature__text">Imágenes, descripciones y catálogo digital para que vendas desde hoy.</p>
+          </div>
+        </div>
+        <div class="resellers__cta">
+          <p>¿Querés ser parte del equipo de revendedores Marval?</p>
+          <a href="https://wa.me/5491127245396?text=Hola%20Marval%20Estampa%2C%20quiero%20sumarme%20como%20revendedor" class="btn btn--lime btn--lg" target="_blank" rel="noopener">Quiero ser revendedor</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO PERSONALIZAR -->
+    <section class="process section" id="personalizar">
+      <div class="container">
+        <div class="section__head section__head--center">
+          <span class="pill pill--lime">Proceso</span>
+          <h2 class="section__title">Personalizá en <span class="grad-text">3 simples pasos</span></h2>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num">01</span>
+            <h3 class="step__title">Elegí el producto</h3>
+            <p class="step__text">Remeras, textiles o calcos. Elegí color, talle y cantidad.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">02</span>
+            <h3 class="step__title">Subí tu diseño</h3>
+            <p class="step__text">Enviá tu logo, foto o idea por WhatsApp. Si no tenés diseño, lo creamos juntos.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">03</span>
+            <h3 class="step__title">Recibí tu pedido</h3>
+            <p class="step__text">Producción en 48hs y envío a todo el país. Listo para lucir o vender.</p>
+          </li>
+        </ol>
+        <div class="process__cta">
+          <a href="https://wa.me/5491127245396?text=Hola%20Marval%20Estampa%2C%20quiero%20personalizar%20un%20producto" class="btn btn--violet btn--lg" target="_blank" rel="noopener">Empezar mi pedido</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contact section section--dark" id="contacto">
+      <div class="container contact__inner">
+        <div class="contact__info">
+          <span class="pill pill--violet">Contacto</span>
+          <h2 class="section__title section__title--light">Hablemos de <br>tu proyecto</h2>
+          <p class="contact__text">Respondemos rápido por WhatsApp. También podés escribirnos por redes.</p>
+          <ul class="contact__list">
+            <li><span class="contact__dot">💬</span><a href="https://wa.me/5491127245396" target="_blank" rel="noopener">+54 9 11 2724-5396</a></li>
+            <li><span class="contact__dot">📧</span><a href="mailto:hola@marvalestampa.com">hola@marvalestampa.com</a></li>
+            <li><span class="contact__dot">📍</span><span>Buenos Aires, Argentina</span></li>
+          </ul>
+          <div class="contact__social">
+            <a href="#" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
+            <a href="#" aria-label="TikTok" target="_blank" rel="noopener">TikTok</a>
+            <a href="#" aria-label="Facebook" target="_blank" rel="noopener">Facebook</a>
+          </div>
+        </div>
+        <form class="form" id="contactForm" novalidate>
+          <label class="form__field">
+            <span>Nombre</span>
+            <input type="text" name="nombre" placeholder="Tu nombre" required>
+          </label>
+          <label class="form__field">
+            <span>WhatsApp / Teléfono</span>
+            <input type="tel" name="telefono" placeholder="+54 9 11 ..." required>
+          </label>
+          <label class="form__field">
+            <span>Mensaje</span>
+            <textarea name="mensaje" rows="4" placeholder="Contanos qué necesitás..." required></textarea>
+          </label>
+          <button type="submit" class="btn btn--violet btn--lg form__submit">Enviar por WhatsApp</button>
+          <p class="form__hint">Al enviar, se abre WhatsApp con tu mensaje listo.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo logo--light">
+        <span class="logo__mark">M</span>
+        <span class="logo__text">Marval<span>Estampa</span></span>
+      </a>
+      <nav class="footer__nav" aria-label="Navegación de pie de página">
+        <a href="#inicio">Inicio</a>
+        <a href="#tienda">Tienda</a>
+        <a href="#revendedores">Revendedores</a>
+        <a href="#personalizar">Cómo personalizar</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <p class="footer__copy">© 2026 Marval Estampa. Hecho con ♥ y tinta.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
