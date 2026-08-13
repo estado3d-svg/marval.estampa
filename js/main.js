@@ -20,13 +20,11 @@ themeToggle.addEventListener("click", () =>
   applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark")
 );
 
-// Barra de progreso de scroll + estampadora de fondo
+// Barra de progreso de scroll
 const progress = document.getElementById("progress");
 const updateProgress = () => {
   const max = document.documentElement.scrollHeight - window.innerHeight;
-  const p = max > 0 ? Math.min(window.scrollY / max, 1) : 0;
-  progress.style.transform = `scaleX(${p})`;
-  document.documentElement.style.setProperty("--pg", p);
+  progress.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
 };
 window.addEventListener("scroll", updateProgress, { passive: true });
 window.addEventListener("resize", updateProgress);
