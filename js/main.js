@@ -2,6 +2,60 @@
 
 const WA_NUMBER = "5491127245396";
 
+// Tema claro / oscuro
+const themeToggle = document.getElementById("themeToggle");
+const applyTheme = (t) => {
+  document.documentElement.dataset.theme = t;
+  localStorage.setItem("marval-theme", t);
+  themeToggle.setAttribute(
+    "aria-label",
+    t === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro"
+  );
+};
+themeToggle.setAttribute(
+  "aria-label",
+  document.documentElement.dataset.theme === "dark" ? "Cambiar a modo claro" : "Cambiar a modo oscuro"
+);
+themeToggle.addEventListener("click", () =>
+  applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark")
+);
+
+// Barra de progreso de scroll
+const progress = document.getElementById("progress");
+const updateProgress = () => {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  progress.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
+};
+window.addEventListener("scroll", updateProgress, { passive: true });
+window.addEventListener("resize", updateProgress);
+updateProgress();
+
+// Spotlight que sigue al cursor (solo desktop)
+const fine = window.matchMedia("(hover: hover) and (pointer: fine)");
+if (fine.matches) {
+  let tx = 50, ty = 50, raf = null;
+  window.addEventListener("pointermove", (e) => {
+    tx = (e.clientX / window.innerWidth) * 100;
+    ty = (e.clientY / window.innerHeight) * 100;
+    if (!raf) {
+      raf = requestAnimationFrame(() => {
+        document.documentElement.style.setProperty("--mx", tx + "%");
+        document.documentElement.style.setProperty("--my", ty + "%");
+        raf = null;
+      });
+    }
+  });
+
+  // Brillo suave que sigue al cursor dentro de cada tarjeta
+  document.querySelectorAll(".card").forEach((card) => {
+    card.addEventListener("pointermove", (e) => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty("--gx", `${((e.clientX - r.left) / r.width) * 100}%`);
+      card.style.setProperty("--gy", `${((e.clientY - r.top) / r.height) * 100}%`);
+    });
+  });
+}
+
 // Nav: sombra al hacer scroll
 const nav = document.getElementById("nav");
 const onScroll = () => nav.classList.toggle("nav--scrolled", window.scrollY > 30);

@@ -10,10 +10,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script>
+    (function () {
+      var t = localStorage.getItem("marval-theme");
+      if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
 </head>
 <body>
 
   <a class="skip-link" href="#inicio">Saltar al contenido</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
 
   <!-- NAV -->
   <header class="nav" id="nav">
@@ -30,6 +38,10 @@
         <a href="#contacto" class="nav__link">Contacto</a>
         <a href="https://wa.me/5491127245396?text=Hola%20Marval%20Estampa%2C%20quiero%20hacer%20un%20pedido" class="btn btn--dark nav__cta" target="_blank" rel="noopener">Pedir ahora</a>
       </nav>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar a modo oscuro">
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
       <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
         <span></span><span></span><span></span>
       </button>
