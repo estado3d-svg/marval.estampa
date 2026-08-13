@@ -236,9 +236,9 @@ button { font-family: inherit; cursor: pointer; }
 @keyframes logoSpin { to { transform: rotate(360deg); } }
 
 .logo__mark img {
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
-  object-fit: cover;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  object-fit: contain;
   border-radius: 22px;
   background: var(--bg);
   transition: transform 0.4s var(--ease);
